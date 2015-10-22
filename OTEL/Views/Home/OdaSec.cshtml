@@ -1,0 +1,29 @@
+﻿@model     IEnumerable<OTEL.Data.Oda>
+
+@{
+    ViewBag.Title = "OdaSec";
+}
+
+@{
+   foreach(var item in Model) { 
+
+        <div style="width:100%;margin-top:25px;box-shadow:0 0 5px gray;padding:25px;">
+            <h3 style="font-weight:bold;color:black">
+
+                @Html.Label("Paket Özelliği : ")
+               
+                    @Html.DisplayFor(i=>item.Paket.paketOzellik)<br /><br />
+                @Html.Label("Oda Tipi : ")
+                    @Html.DisplayFor(i => item.odaTip)<br /><br />
+                @Html.Label(" Gecelik Fiyatı : ")
+                    @Html.DisplayFor(i => item.fiyat)<br /><br />
+                   
+                    
+            </h3>
+
+
+                </div>}
+}
+                
+
+

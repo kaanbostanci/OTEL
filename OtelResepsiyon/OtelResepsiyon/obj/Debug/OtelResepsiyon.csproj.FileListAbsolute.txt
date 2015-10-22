@@ -1,0 +1,16 @@
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\bin\Debug\OtelResepsiyon.exe.config
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\bin\Debug\OtelResepsiyon.exe
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\bin\Debug\OtelResepsiyon.pdb
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.csprojResolveAssemblyReference.cache
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Form1.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Properties.Resources.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.csproj.GenerateResource.Cache
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.exe
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.pdb
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Form3.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.AnaForm.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Form4.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Form5.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Form2.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Form6.resources
+c:\users\peakupuser-7\documents\visual studio 2013\Projects\OtelResepsiyon\OtelResepsiyon\obj\Debug\OtelResepsiyon.Form7.resources

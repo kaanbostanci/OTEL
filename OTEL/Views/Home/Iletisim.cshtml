@@ -1,0 +1,42 @@
+﻿@model OTEL.Data.OtelTanitim
+
+@{
+    ViewBag.Title = "Iletisim";
+}
+@section scripts {
+<style type="text/css">
+       #formKapsayici {
+            box-shadow: 0 0 5px gray;
+            padding: 25px;
+            height: 500px;
+            
+        }
+    #divSol, #divSag {
+        float: left;
+        margin-left: 25px;
+    }
+
+    input[type=text] {
+        width: 250px;
+    }
+    </style>
+   
+   
+
+    }<h2 style="color:orange"> İletisim</h2> 
+@using (Html.BeginForm("Iletisim", "Home", FormMethod.Get, new { id = "formKapsayici" })) { 
+<div id="divSol">
+    @Html.Label("Adres : ")<br /><br />
+    @Html.Label("Tel   : ")<br /><br />
+    @Html.Label("Fax   : ")<br /><br />
+    @Html.Label("E-Mail: ")<br /><br />
+
+</div>
+<div id="divSag">
+    @Html.DisplayFor(i => Model.Icerik)<br /><br />
+    @Html.DisplayFor(i => Model.otelTel)<br /><br />
+    @Html.DisplayFor(i => Model.otelFax)<br /><br />
+    @Html.DisplayFor(i => Model.otelEmail)<br /><br />
+</div>
+@Html.ValidationSummary()
+}

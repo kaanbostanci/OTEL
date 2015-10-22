@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 11.75" name="OtelModelDataContext">
+  <DataContextMoniker Name="/OtelModelDataContextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="854e2f46-a2ca-493a-9299-ffd6578d6850" absoluteBounds="0.75, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/Yonetici" />
+      <nestedChildShapes>
+        <elementListCompartment Id="214791e5-40af-4b45-aaf1-ab8c655ca20f" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80542920-1296-4c42-b0d6-9f0ca71dc9a9" absoluteBounds="0.75, 9.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/Vardiya" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d6477a0-d100-4818-9486-8d1106a32e34" absoluteBounds="0.765, 9.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51de785f-e506-49ec-a265-1c877f04b859" absoluteBounds="9, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/Rezervasyon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="279b07eb-fa21-47b9-a6b9-501a4b7a7b75" absoluteBounds="9.015, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3669ef46-71dc-4bf9-bc52-d40a25b5a0ae" absoluteBounds="3.5, 9, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/Personel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b4cdb82-5007-491a-86ab-f0c44cad80c1" absoluteBounds="3.515, 9.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c7d9c49-6b3f-456b-a890-7caef05cfd8c" absoluteBounds="0.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/Paket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f37491cd-6081-4c15-8510-a6464c71299d" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0aba9c80-c60e-487d-afe5-8e58b8e2d39c" absoluteBounds="6.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/OtelTanitim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d02c1dc-1924-4ef4-83b6-ed0c1fa9515b" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ebb299dc-9a2d-47a3-b114-157ff71a05f4" absoluteBounds="3.5, 2.375, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/Oda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e27c2daa-e218-4396-888b-ad7a8a8115df" absoluteBounds="3.515, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e53b4e5-599a-4133-aa34-ced06f6e302e" absoluteBounds="6.25, 5.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/Musteri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e315b13-363b-42be-99ac-6038e4eae789" absoluteBounds="6.265, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0644391-0963-4b5a-a2e5-e1a766149336" absoluteBounds="8.75, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OtelModelDataContextDataContext/__MigrationHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb754369-34af-4dd0-ad1c-544ee375ac2b" absoluteBounds="8.765, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 10.1642976888021); (3.5 : 10.1642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OtelModelDataContextDataContext/Vardiya/Vardiya_Personel" />
+      <nodes>
+        <classShapeMoniker Id="80542920-1296-4c42-b0d6-9f0ca71dc9a9" />
+        <classShapeMoniker Id="3669ef46-71dc-4bf9-bc52-d40a25b5a0ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.04409912109375); (9 : 4.04409912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OtelModelDataContextDataContext/Oda/Oda_Rezervasyon" />
+      <nodes>
+        <classShapeMoniker Id="ebb299dc-9a2d-47a3-b114-157ff71a05f4" />
+        <classShapeMoniker Id="51de785f-e506-49ec-a265-1c877f04b859" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OtelModelDataContextDataContext/Paket/Paket_Oda" />
+      <nodes>
+        <classShapeMoniker Id="3c7d9c49-6b3f-456b-a890-7caef05cfd8c" />
+        <classShapeMoniker Id="ebb299dc-9a2d-47a3-b114-157ff71a05f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.41909912109375); (9 : 5.41909912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OtelModelDataContextDataContext/Musteri/Musteri_Rezervasyon" />
+      <nodes>
+        <classShapeMoniker Id="4e53b4e5-599a-4133-aa34-ced06f6e302e" />
+        <classShapeMoniker Id="51de785f-e506-49ec-a265-1c877f04b859" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 4.3381982421875); (4.5 : 6.10659912109375); (6.25 : 6.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OtelModelDataContextDataContext/Oda/Oda_Musteri" />
+      <nodes>
+        <classShapeMoniker Id="ebb299dc-9a2d-47a3-b114-157ff71a05f4" />
+        <classShapeMoniker Id="4e53b4e5-599a-4133-aa34-ced06f6e302e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

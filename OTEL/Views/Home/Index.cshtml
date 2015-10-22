@@ -1,0 +1,105 @@
+﻿    @model  List<string>
+@{
+    ViewBag.Title = "Anasayfa";
+}
+@section scripts{
+    <style type="text/css">
+        input[type=text] {
+            width: 250px;
+        }
+
+
+
+        #btnOdaAra {
+            clear: both;
+            display: block;
+            margin-right: 132px;
+            float: right;
+        }
+    </style>
+
+    <!--Tarih seçici kullanmak için jquery tanımlıyoruz online olarak-->
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <!--Tarih seçicimizi burada hazırlayacağız-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#textBoxGiris").datepicker();
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#textBoxCikis").datepicker();
+        });
+    </script>
+
+}
+
+
+@using (Html.BeginForm("OdaSec", "Home", FormMethod.Post))
+{
+    <div class="page-header">
+        <h1>Bilge OTEL</h1>
+        <p class="lead">Bilge Hotel, Kemer bölgesinde hizmet veren 5 yıldızlı bir oteldir. </p>
+
+
+    </div>
+    <div style="border:1px solid black;padding:25px;text-align:center;">
+
+        @Html.Label("Giriş Tarihi : ")
+        @Html.TextBox("textBoxGiris")
+
+
+        @Html.Label("Çıkış Tarihi : ")
+        @Html.TextBox("textBoxCikis")
+
+        @Html.DropDownList("tip", Model.Select(x => new SelectListItem { Text = x }), " Oda Tipini Seçiniz") 
+        <input type="submit" value="Oda Ara" id="btnOdaAra" />
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Odalar</h2>
+            <p>
+                Odalarımızın ayrıntıları şu şekildedir, zemin katta oda yoktur, 4 katlı olan otelin 1. katında tek kişilik ve üç kişilik (tek kişilik üç yataklı)odalar, 2. katta tek kişilik ve iki kişilik(tek kişilik iki yataklı) oda, 3. katta iki kişilik (duble) ve 3 kişilik (bir tek kişi bir duble yatak) oda, dördüncü katta ise  iki kişilik (duble),  4 kişilik (1 duble, 2 tek kilişilik yatak) ve 1 adet kral dairesi bulunmaktadır.
+            </p>
+
+            <p><a class="btn btn-default" href="/Home/OdaGoruntule">Odalara Git &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>İndirimler</h2>
+            <p>
+                En az bir ay önceki herşey dahil rezervasyonlarda %18,<br /><br />
+
+                En az bir ay önceki tam pansiyon rezervasyonlarda %16, <br /><br />
+
+                En az 3 ay önce yapılan rezervasyonlarda %23 indirim.<br /><br />
+            </p>
+            <p><a class="btn btn-default" href="/Rezervasyon/RezervasyonYap">Rezervasyon Yap &raquo;</a></p>
+
+
+        </div>
+        <div class="col-md-4">
+            <h2>Fırsatlar</h2>
+            <p>
+                Yeni Evlilere Balayı Paketi<br /><br />
+
+                Ramazana Özel Paket <br /><br />
+
+                İş Seyahati Paketi <br /><br />
+            </p>
+            <p><a class="btn btn-default" href="">Fırsatları Görüntüle &raquo;</a></p>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!--Html.ValidationSummary ile formda oluşan geçerlilik hatalarını liste halinde gösterebiliyoruz.-->
+    @Html.ValidationSummary()
+}

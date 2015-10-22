@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OTELdb" Class="OtelModelDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;Initial Catalog=OTELdb;Integrated Security=True" SettingsObjectName="OtelResepsiyon.Properties.Settings" SettingsPropertyName="OTELdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Yoneticis" Member="Yoneticis">
+    <Type Name="Yonetici">
+      <Column Name="YoneticiId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Soyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Maas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vardiyas" Member="Vardiyas">
+    <Type Name="Vardiya">
+      <Column Name="vardiyaId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="baslangic_saati" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="bitis_saati" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mesai_saati" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Vardiya_Personel" Member="Personels" ThisKey="vardiyaId" OtherKey="Vardiya_vardiyaId" Type="Personel" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rezervasyons" Member="Rezervasyons">
+    <Type Name="Rezervasyon">
+      <Column Name="RezervasyonId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="girisTarih" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cikisTarih" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RezervasyonTarih" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Musteri_MusteriId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Oda_odaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Oda_Rezervasyon" Member="Oda" ThisKey="Oda_odaId" OtherKey="odaId" Type="Oda" IsForeignKey="true" />
+      <Association Name="Musteri_Rezervasyon" Member="Musteri" ThisKey="Musteri_MusteriId" OtherKey="MusteriId" Type="Musteri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Personels" Member="Personels">
+    <Type Name="Personel">
+      <Column Name="personelId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Soyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gorev" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="saatlikUcret" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="telefon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Vardiya_vardiyaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sifre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Vardiya_Personel" Member="Vardiya" ThisKey="Vardiya_vardiyaId" OtherKey="vardiyaId" Type="Vardiya" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pakets" Member="Pakets">
+    <Type Name="Paket">
+      <Column Name="paketId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="paketOzellik" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Paket_Oda" Member="Odas" ThisKey="paketId" OtherKey="Paket_paketId" Type="Oda" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OtelTanitims" Member="OtelTanitims">
+    <Type Name="OtelTanitim">
+      <Column Name="oteltanitimId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Icerik" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ResimYolu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="otelTel" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="otelFax" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="otelEmail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Odas" Member="Odas">
+    <Type Name="Oda">
+      <Column Name="odaId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="katNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="odaTip" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="durum" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="fiyat" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Paket_paketId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Oda_Rezervasyon" Member="Rezervasyons" ThisKey="odaId" OtherKey="Oda_odaId" Type="Rezervasyon" />
+      <Association Name="Oda_Musteri" Member="Musteris" ThisKey="odaId" OtherKey="Oda_odaId" Type="Musteri" />
+      <Association Name="Paket_Oda" Member="Paket" ThisKey="Paket_paketId" OtherKey="paketId" Type="Paket" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Musteris" Member="Musteris">
+    <Type Name="Musteri">
+      <Column Name="MusteriId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Soyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kimlikNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="telefon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Oda_odaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Musteri_Rezervasyon" Member="Rezervasyons" ThisKey="MusteriId" OtherKey="Musteri_MusteriId" Type="Rezervasyon" />
+      <Association Name="Oda_Musteri" Member="Oda" ThisKey="Oda_odaId" OtherKey="odaId" Type="Oda" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[__MigrationHistory]" Member="__MigrationHistories">
+    <Type Name="__MigrationHistory">
+      <Column Name="MigrationId" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContextKey" Type="System.String" DbType="NVarChar(300) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Model" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ProductVersion" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

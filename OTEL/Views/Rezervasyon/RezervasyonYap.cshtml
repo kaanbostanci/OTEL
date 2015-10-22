@@ -1,0 +1,91 @@
+﻿@model  OTEL.Data.Rezervasyon
+       
+
+@{
+    ViewBag.Title = "RezervasyonYap";                                                                                                                                                                                                                                                                                        
+}
+
+@section scripts{
+    <style type="text/css">
+        #formKapsayici {
+            box-shadow: 0 0 5px gray;
+            padding: 25px;
+            height: 500px;
+            
+        }
+
+        #divSol, #divSag {
+            float: left;
+            margin-left: 25px;
+        }
+
+        input[type=text] {
+            width: 250px;
+        }
+
+        #Onayla {
+            /*clear komutu ile önceki divlerin sola yaslanarak sıralanmasında, butonun bu yaslanmaya
+            uymayıp alt satıra inmesini sağlıyoruz*/
+            clear: both;
+            display: block;
+            margin-left: 132px;
+        }
+    </style>
+
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#girisTarih").datepicker();
+    });
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#cikisTarih").datepicker();
+    });
+
+</script>
+
+}
+<h2>Rezervasyon</h2>
+
+@using (Html.BeginForm("RezervasyonYap", "Rezervasyon", FormMethod.Post, new { id = "formKapsayici" }))
+{
+    <div id="divSol">
+        @Html.LabelFor(i=>Model.Musteri.Ad)<br /><br />
+
+        @Html.LabelFor(i => Model.Musteri.Soyad)<br /><br />
+
+        <!--Html.LabelFor(i => Model.Musteri.kimlikNo)<br /><br /> -->
+
+        @Html.LabelFor(i => Model.Musteri.telefon)<br /><br />
+
+        @Html.LabelFor(i => Model.girisTarih)<br /><br />
+
+        @Html.LabelFor(i => Model.cikisTarih)<br /><br />
+
+        @Html.LabelFor(i=>Model.Oda.odaTip)<br /><br />
+
+        @Html.LabelFor(i => Model.Oda.Paket.paketOzellik)<br /><br />
+
+        
+        </div>
+    <div id="divSag">
+        @Html.TextBoxFor(i => Model.Musteri.Ad)<br /><br />
+        @Html.TextBoxFor(i => Model.Musteri.Soyad)<br /><br />
+        <!--Html.TextBoxFor(i => Model.Musteri.kimlikNo)<br /><br />-->
+        @Html.TextBoxFor(i => Model.Musteri.telefon)<br /><br />
+        @Html.TextBoxFor(i => Model.girisTarih)<br /><br />
+        @Html.TextBoxFor(i => Model.cikisTarih)<br /><br />
+        @Html.DropDownList("Liste")<br /> <br />
+        @Html.DropDownList("Liste1")<br /> <br />
+
+
+        
+    </div>
+    <input type="submit" value="Rezervasyon Yap" id="Onayla" /><br /><br />
+    @Html.ValidationSummary()
+}
+
